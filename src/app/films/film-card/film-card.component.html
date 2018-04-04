@@ -1,23 +1,11 @@
 <div class="ui card">
   <div class="image">
-    <img [src]="film.poster">
+    <img [src]="film.Poster">
   </div>
   <div class="content">
-    <a class="header">{{film.title}}</a>
+    <a class="header">{{film.Title}}</a>
     <div class="meta">
-      <span class="date">Year {{film.year}}</span>
-    </div>
-    <div class="description">
-      {{film.synopsis}}
-    </div>
-  </div>
-  <div class="extra content">
-    <div>
-      Director:{{film.director}}
-    </div>
-    <div>
-      Actors:
-      <p *ngFor="let actor of film.actors">{{actor}}</p>
+      <span class="date">Year {{film.Year}}</span>
     </div>
   </div>
 </div>

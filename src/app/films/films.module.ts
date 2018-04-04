@@ -1,3 +1,5 @@
+import { FilmsRoutingModule } from './films-routing.module';
+import { FormsModule } from '@angular/forms';
 import { FilmsService } from './services/films.service';
 import { FilmCardComponent } from './film-card/film-card.component';
 import { NgModule } from '@angular/core';
@@ -8,7 +10,9 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    FilmsRoutingModule
   ],
   declarations: [
     FilmsContainerComponent,

@@ -1,10 +1,7 @@
 export class Film {
-    id: number;
-    title:string;
-    poster: string;
-    synopsis: string;
-    genres: string[];
-    year: number;
-    director: string;
-    actors: string[];
+    Poster: string;
+    Title:  string;
+    Type:  string;
+    Year: string;
+    imdbID: string;
 }

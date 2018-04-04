@@ -1,11 +1,17 @@
+import { AuthGuard } from './guards/auth.guard';
+import { AuthService } from './login/services/auth.service';
 import { Routes,RouterModule } from '@angular/router';
 import { NgModule } from "@angular/core";
 import { LoginComponent } from './login/login-component/login.component';
-import { FilmsContainerComponent } from './films/films-container/films-container.component';
 
 const routes: Routes = [
     {path: '', component: LoginComponent},
-    {path:'films' ,component:FilmsContainerComponent}
+    {path: 'login', component: LoginComponent},
+    {
+        path:'films' ,
+        loadChildren: './films/films.module#FilmsModule',
+        canLoad: [AuthGuard]
+    }
 ];
 
 @NgModule({

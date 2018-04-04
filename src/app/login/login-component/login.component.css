@@ -1,0 +1,7 @@
+.column {
+    max-width: 450px;
+}
+.aligned.center{
+    height: 100%;
+    justify-content: center;
+}
