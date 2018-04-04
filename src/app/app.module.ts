@@ -1,24 +1,25 @@
-import { FilmsService } from './services/films.service';
-
+import { FilmsModule } from './films/films.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { FilmCardComponent } from './film-card/film-card.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AppRoutingModule } from './app-routing.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FilmCardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    LoginModule,
+    FilmsModule
   ],
-  providers: [FilmsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

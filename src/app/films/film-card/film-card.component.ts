@@ -1,4 +1,4 @@
-import { Film } from './../models/film';
+import { Film } from '../../models/film';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
