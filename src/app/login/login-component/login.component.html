@@ -7,26 +7,28 @@
         Films Db
       </div>
     </h2>
-    <form class="ui large form">
+    <form class="ui large form" (ngSubmit)="login()" #loginForm="ngForm">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="email" [(ngModel)]="user" placeholder="Usuario">
+            <input type="text" name="user" required [(ngModel)]="user" placeholder="Usuario" #userControl="ngModel">
           </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input type="password" name="password" [(ngModel)]="password" placeholder="Contraseña">
+            <input type="password" name="password" required [(ngModel)]="password" placeholder="Contraseña"  #pwdControl="ngModel">
           </div>
         </div>
-        <div (click)="login()" class="ui fluid large teal submit button">Login</div>
+        <button type="submit">Login</button>
       </div>
     </form>
-      
+    <div [hidden]="loginForm.valid || loginForm.pristine" class="ui error message">
+        <p>Usuario y Password son obligatorios</p>
+    </div>
     <div *ngIf="showError" class="ui error message">
         <p>Contraseña o Usuario invalidos, intentalo de nuevo</p>
-      </div>
+    </div>
   </div>
 </div>

@@ -11,6 +11,11 @@ const routes: Routes = [
         path:'films' ,
         loadChildren: './films/films.module#FilmsModule',
         canLoad: [AuthGuard]
+    },
+    {
+        path:'me' ,
+        loadChildren: './me/me.module#MeModule',
+        canLoad: [AuthGuard]
     }
 ];
 

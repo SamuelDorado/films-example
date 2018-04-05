@@ -1,0 +1,11 @@
+:host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form.ui.form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}

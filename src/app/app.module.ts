@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { FilmsModule } from './films/films.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
